@@ -28,8 +28,8 @@ Proyecto de módulo único. No tiene subproyectos ni capas de servicio.
 | `src/main/java/org/example/Main.java` | Código principal | Clase generada por la plantilla de IntelliJ. Imprime un saludo y un contador del 1 al 5. No participa en las pruebas. |
 | `src/test/java/driver/DriverManager.java` | Código de pruebas | Administra el `WebDriver` por hilo mediante `ThreadLocal`. Crea un `ChromeDriver` con `--start-maximized` y espera implícita de 10 s. |
 | `src/test/java/hook/Hook.java` | Código de pruebas | Hooks de Cucumber: `@Before` obtiene el driver y `@After` lo cierra. |
-| `src/test/java/page/BasePage.java` | Código de pruebas | Clase base de Page Object. Métodos: `navigateTo`, `find` (espera explícita de 15 s), `click`, `type`, `getText`, `isDisplayed`. |
-| `src/test/java/page/HomePage.java` | Código de pruebas | Page Object de la página de inicio. Solo tiene `accURL(String)`. No define localizadores. |
+| `pages` | Código de pruebas | Clase base de Page Object. Métodos: `navigateTo`, `find` (espera explícita de 15 s), `click`, `type`, `getText`, `isDisplayed`. |
+| `pages` | Código de pruebas | Page Object de la página de inicio. Solo tiene `accURL(String)`. No define localizadores. |
 | `src/test/java/steps/CreateUserStep.java` | Código de pruebas | Definiciones de pasos Cucumber. Solo `ingresa en esta URL {string}` tiene código. Los demás lanzan `PendingException`. |
 | `src/test/resources/Feature/CreateUser/CreateUser.feature` | Especificación | Feature de registro con Background y un escenario (TC-SIGNUP-01). |
 | `build/` | Generado | Clases compiladas, copia del feature en recursos de prueba, reporte de problemas de Gradle y datos de compilación incremental. |
