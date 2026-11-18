@@ -32,9 +32,10 @@ Feature: Registro de Nueva Cuenta de Usuario (Sign Up)
     And deja las preferencias de perfil con sus valores por defecto
     And da click en "Save Account Information"
     Then el sistema redirige a la página de inicio "/catalog"
-    And la página de inicio muestra el texto "docs"
+    And la página de inicio muestra el texto "Dogs"
     When da click en "Sign In"
     And ingresa el User ID registrado
     And ingresa la contraseña registrada
     And envía el formulario de inicio de sesión
-    Then la página de inicio muestra el texto "docs"
+    Then la página de inicio muestra el texto "Dogs"
+
