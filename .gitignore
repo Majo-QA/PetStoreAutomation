@@ -41,3 +41,5 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+usuarios_registrados.csv
+evidencias/

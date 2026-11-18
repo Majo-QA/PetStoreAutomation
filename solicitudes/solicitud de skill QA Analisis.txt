@@ -1,0 +1,3 @@
+Quiero crear un agente que tenga el skill de analisis del ciclo de calidad para mi proyecto PetStoreAutomation, basado en este documento "C:\Users\VICTUS\IdeaProjects\PetStoreAutomation\IA\Analisis_gaps_riegos_ambiguedades.md"
+
+analiza para disenar un skill para el ciclo de QA en la etapa de analisis, procesar las solicitudes de los documentos funcionales que se van a ir incorporando en el proyecto, para automatizar. Guardar el documento en formato .md

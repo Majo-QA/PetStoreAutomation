@@ -47,4 +47,8 @@ public class BasePage {
             return false;
         }
     }
+    public boolean esperarUrlQueContenga(String parteDeLaUrl) {
+        return wait.until(ExpectedConditions.urlContains(parteDeLaUrl));
+    }
+
 }

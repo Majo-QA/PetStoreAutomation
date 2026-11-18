@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.DatosGenerados;
 
 public class RegisterPage extends BasePage {
 
@@ -9,7 +10,7 @@ public class RegisterPage extends BasePage {
     // By.name("...") busca el elemento por su atributo name del HTML.
     private By userIdField = By.name("username");
     private By newPasswordField = By.name("password");
-    private By repeatPasswordField = By.name("repeatPassword");
+    private By repeatPasswordField = By.name("repeatedPassword");
     private By firstNameField = By.name("firstName");
     private By lastNameField = By.name("lastName");
     private By emailField = By.name("email");
@@ -25,6 +26,8 @@ public class RegisterPage extends BasePage {
     private By enableMyListCheckbox = By.name("listOption");
     private By enableMyBannerCheckbox = By.name("bannerOption");
     private By saveAccountButton = By.name("newAccount");
+    private String userId;
+    private String email;
 
     // Constructor: recibe el driver y se lo pasa a BasePage.
     public RegisterPage(WebDriver driver) {
@@ -80,5 +83,23 @@ public class RegisterPage extends BasePage {
             default:
                 throw new IllegalArgumentException("Campo no reconocido: " + campo);
         }
+    }
+
+    public String userCreator(){
+        return userId = DatosGenerados.generarUserId();
+    }
+    public String emailCreator(){
+        return email = DatosGenerados.generarEmail();
+    }
+
+    public boolean sonPreferenciasPorDefecto() {
+        // isSelected() devuelve true si el checkbox está marcado, false si está desmarcado
+        boolean myListDesmarcado = !find(enableMyListCheckbox).isSelected();
+        boolean myBannerDesmarcado = !find(enableMyBannerCheckbox).isSelected();
+
+        return myListDesmarcado && myBannerDesmarcado;
+    }
+    public void guardarCuenta() {
+        click(saveAccountButton);
     }
 }
